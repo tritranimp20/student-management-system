@@ -36,12 +36,11 @@ public class AddStudentFragment extends Fragment {
         view.findViewById(R.id.btn_add).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Context context = AddStudentFragment.this.getContext();
-                CharSequence text = AddStudentFragment.this.getResources().getString(R.string.add_new_student_successfully);
+                Context context = getContext();
+                CharSequence text = getResources().getString(R.string.add_new_student_successfully);
                 int duration = Toast.LENGTH_SHORT;
 
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
+                Toast.makeText(context, text, duration).show();
             }
         });
     }
